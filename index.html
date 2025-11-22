@@ -65,7 +65,26 @@
 			<!-- END brand -->
             <img src="assets/images/logo bws.png" alt="" class="rounded-circle" />
             <h5>DINAS SOSIAL P3AKB <br /><span class="text-muted fw-light"> KABUPATEN BONDOWOSO</span></h5>
-			
+		 <script type="text/javascript">
+ window.onload = function() { jam(); }
+
+ function jam() {
+  var e = document.getElementById('jam'),
+  d = new Date(), h, m, s;
+  h = d.getHours();
+  m = set(d.getMinutes());
+  s = set(d.getSeconds());
+
+  e.innerHTML = h +':'+ m +':'+ s;
+
+  setTimeout('jam()', 1000);
+ }
+
+ function set(e) {
+  e = e < 10 ? '0'+ e : e;
+  return e;
+ }
+</script>   	
  
 			<!-- BEGIN menu-search -->
 			<form class="menu-search" method="POST" name="header_search_form">
@@ -430,26 +449,7 @@ document.getElementById("tanggalwaktu").innerHTML = hariarray[hari]+" "+tanggal+
 <li  style="font-size:15px; text-align: justify;">Meningkatkan Kinerja: dengan Dasboard pengguna bisa mengukur dan menevaluasi hasil menggunakan matrik yang relevan dan objektif </li >
 <li  style="font-size:15px; text-align: justify;">Meningkatkan komunikasi: Dasboard memberikan fleksibilitas pimpinan dalam berbagai data dan informasi penting dengan cepat baik kepada pihak terkait baik internal maupun eksternal, hal ini meminimalisir kesalahan akibat kesalahan komunikasi karena kesalahan data dan informasi </li >
 
- <script type="text/javascript">
- window.onload = function() { jam(); }
-
- function jam() {
-  var e = document.getElementById('jam'),
-  d = new Date(), h, m, s;
-  h = d.getHours();
-  m = set(d.getMinutes());
-  s = set(d.getSeconds());
-
-  e.innerHTML = h +':'+ m +':'+ s;
-
-  setTimeout('jam()', 1000);
- }
-
- function set(e) {
-  e = e < 10 ? '0'+ e : e;
-  return e;
- }
-</script>   
+ 
  <!-- END theme-panel -->
 		<!-- BEGIN btn-scroll-top -->
 		<a href="#" data-toggle="scroll-to-top" class="btn-scroll-top fade"><i class="fa fa-arrow-up"></i></a>
@@ -482,6 +482,7 @@ document.getElementById("tanggalwaktu").innerHTML = hariarray[hari]+" "+tanggal+
 </body>
 
 </html>
+
 
 
 
