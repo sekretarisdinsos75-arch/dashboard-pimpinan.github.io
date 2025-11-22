@@ -1,0 +1,488 @@
+<!doctype html>
+<html lang="en">
+
+
+<!-- Mirrored from maxartkiller.com/website/oneuiux2/HTML/restaurant/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 02 Aug 2022 09:36:26 GMT -->
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="generator" content="">
+     <title>Apliksi Dinas Sosial</title> 
+    <!-- manifest meta -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="manifest" href="manifest.json" />
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" href="assets/images/logo bws.png" sizes="180x180">
+    <link rel="icon" href="assets/images/logo bws.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="assets/images/logo bws.png" sizes="16x16" type="image/png"> 
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>  
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" rel="stylesheet"/>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.usebootstrap.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>   
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   <!-- bootstrap icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">  
+	<link href="assets/css/vendor.min.css" rel="stylesheet">
+	<link href="assets/css/app.min.css" rel="stylesheet"> 
+	<link href="assets/plugins/jvectormap-next/jquery-jvectormap.css" rel="stylesheet">
+	<link href="assets/plugins/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
+	<!-- ================== END page-css ================== -->
+
+</head>
+<body>
+    
+	<!-- BEGIN #app -->
+	<div id="app" class="app">
+		<!-- BEGIN #header -->
+		<div id="header" class="app-header" >
+			<!-- BEGIN desktop-toggler -->
+			<div class="desktop-toggler">
+				<button type="button" class="menu-toggler" data-toggle-class="app-sidebar-collapsed" data-toggle-target=".app">
+					<span class="bar"></span>
+					<span class="bar"></span>
+				</button>
+			</div>
+			<!-- END desktop-toggler -->
+			
+			<!-- BEGIN mobile-toggler -->
+			<div class="mobile-toggler">
+				<button type="button" class="menu-toggler" data-toggle-class="app-sidebar-mobile-toggled" data-toggle-target=".app">
+					<span class="bar"></span>
+					<span class="bar"></span>
+				</button>
+			</div>
+			<!-- END mobile-toggler -->
+					 <p><-- Menu klik titik dua  </p>
+			<!-- BEGIN brand -->
+			<div class="brand">
+				<a href="index.html" class="brand-logo"> 
+				</a>
+			</div>
+			<!-- END brand -->
+            <img src="assets/images/logo bws.png" alt="" class="rounded-circle" />
+            <h5>DINAS SOSIAL P3AKB <br /><span class="text-muted fw-light"> KABUPATEN BONDOWOSO</span></h5>
+			
+ 
+			<!-- BEGIN menu-search -->
+			<form class="menu-search" method="POST" name="header_search_form">
+				<div class="menu-search-container">
+					<div class="menu-search-icon"><i class="bi bi-search"></i></div>
+					<div class="menu-search-input">
+						<input type="text" class="form-control form-control-lg" placeholder="Search menu...">
+					</div>
+					<div class="menu-search-icon">
+						<a href="#" data-toggle-class="app-header-menu-search-toggled" data-toggle-target=".app"><i class="bi bi-x-lg"></i></a>
+					</div>
+				</div>
+			</form>
+			<!-- END menu-search -->
+		</div>
+		<!-- END #header -->
+		
+		<div id="sidebar" class="app-sidebar">
+			<!-- BEGIN scrollbar -->
+			<div class="app-sidebar-content" data-scrollbar="true" data-height="100%">
+				<!-- BEGIN menu -->
+				<div class="menu">
+					 
+                    <div class="menu-profile">
+						<a href="javascript:;" class="menu-profile-link" data-bs-toggle="dropdown">
+							<div class="menu-profile-cover with-shadow"></div>
+							<div class="menu-profile-image"  > 
+					  <center><img src="assets/images/avatar1.png"  class="w-70 rounded-circle overflow-hidden"><center>  </a></li> 
+					<a ></i> ADMIN SAKIP</a>  
+							</div>
+							<div class="menu-profile-info">
+								<div class="d-flex align-items-center">  
+                                    </div>
+                                    </div>
+                                    </div>
+                                          <h9 style="font-family: Cambria,Georgia,serif; font-size:20px; text-align:center; color:#008080;""><span id="tanggalwaktu"></span></h9>
+<script>
+var tw = new Date();
+if (tw.getTimezoneOffset() == 0) (a=tw.getTime() + ( 7 *60*60*1000))
+else (a=tw.getTime());
+tw.setTime(a);
+var tahun= tw.getFullYear ();
+var hari= tw.getDay ();
+var bulan= tw.getMonth ();
+var tanggal= tw.getDate ();
+var hariarray=new Array("Minggu,","Senin,","Selasa,","Rabu,","Kamis,","Jum'at,","Sabtu,");
+var bulanarray=new Array("Januari","Februari","Maret","April","Mei","Juni","Juli","Agustus","September","Oktober","Nopember","Desember");
+document.getElementById("tanggalwaktu").innerHTML = hariarray[hari]+" "+tanggal+" "+bulanarray[bulan]+" "+tahun;
+
+</script>         
+					<div class="menu-item active">
+						<a href="index.html" class="menu-link">
+							<span class="menu-icon"><i class="fa fa-qrcode"></i></span>
+							<span class="menu-text">DASHBOARD</span>
+					 
+								</a>
+							</div> 
+							<div class="menu-item">
+						<a href="landing.html" class="menu-link">
+							<span class="menu-icon"><i class="fa-solid fa-book-open">‌</i></span>
+							<span class="menu-text" >R E G U L A S I</span>
+						</a>
+					</div> 
+					<div class="menu-item">
+						<a href="landing.html" class="menu-link">
+							<span class="menu-icon"><i class="fa-solid fa-elevator">‌</i></span>
+							<span class="menu-text" >STRUKTUR ORGANISASI</span>
+						</a>
+					</div> 
+					<div class="menu-item">
+						<a href="landing.html" class="menu-link">
+							<span class="menu-icon"><i class="fa-solid fa-chart-bar">‌</i></span>
+							<span class="menu-text" >MATRIKS RPJMD</span>
+						</a>
+					</div> 
+					<div class="menu-item">
+						<a href="landing.html" class="menu-link">
+							<span class="menu-icon"><i class="fa-solid fa-vote-yea">‌</i></span>
+							<span class="menu-text" >RPJMD</span>
+						</a>
+					</div> 
+					<div class="menu-item">
+						<a href="landing.html" class="menu-link">
+							<span class="menu-icon"><i class="fa-solid fa-book">‌</i></span>
+							<span class="menu-text" >RENSTRA</span>
+						</a>
+					</div> 
+					<div class="menu-item">
+						<a href="landing.html" class="menu-link">
+							<span class="menu-icon"><i class="fa-solid fa-handshake">‌</i></span>
+							<span class="menu-text" >PERJANJIAN KINERJA</span>
+						</a>
+					</div> 
+					<div class="menu-item">
+						<a href="landing.html" class="menu-link">
+							<span class="menu-icon"><i class="fa-solid fa-people-line">‌</i></span>
+							<span class="menu-text" >INDIKATOR KINERJA UTAMA</span>
+						</a>
+					</div> 
+					<div class="menu-item">
+						<a href="landing.html" class="menu-link">
+							<span class="menu-icon"><i class="fa-solid fa-layer-group">‌</i></span>
+							<span class="menu-text" >INDIKATOR KINERJA INDIVIDU</span>
+						</a>
+					</div> 
+					<div class="menu-item">
+						<a href="landing.html" class="menu-link">
+							<span class="menu-icon"><i class="fa-solid fa-newspaper">‌</i></span>
+							<span class="menu-text" >PENGUKURAN KINERJA</span>
+						</a>
+					</div> 
+					<div class="menu-item">
+						<a href="landing.html" class="menu-link">
+							<span class="menu-icon"><i class="fa-solid fa-people-group">‌</i></span>
+							<span class="menu-text" >PELAPORAN KINERJ</span>
+						</a>
+					</div> 
+					<div class="menu-item">
+						<a href="landing.html" class="menu-link">
+							<span class="menu-icon"><i class="fa-solid fa-person-chalkboard">‌</i></span>
+							<span class="menu-text" >EVALUASI KINERJA</span>
+						</a>
+					</div> 
+					<div class="menu-item">
+						<a href="landing.html" class="menu-link">
+							<span class="menu-icon"><i class="fa-solid fa-rectangle-list">‌</i></span>
+							<span class="menu-text" >LKJIP</span>
+						</a>
+					</div> 
+					<div class="menu-item">
+						<a href="landing.html" class="menu-link">
+							<span class="menu-icon"><i class="fa-solid fa-users-rectangle">‌</i></span>
+							<span class="menu-text" >RENCANA KINERJA TAHUNAN</span>
+						</a>
+					</div> 
+					<div class="menu-item">
+						<a href="landing.html" class="menu-link">
+							<span class="menu-icon"><i class="fa-solid fa-window-restore">‌</i></span>
+							<span class="menu-text" >LAKIP</span>
+						</a>
+					</div> 
+					<div class="menu-item">
+						<a href="landing.html" class="menu-link">
+							<span class="menu-icon"><i class="fa-solid fa-hockey-puck">‌</i></span>
+							<span class="menu-text" >SAKIP</span>
+						</a>
+					</div> 
+					<div class="menu-item">
+						<a href="landing.html" class="menu-link">
+							<span class="menu-icon"><i class="fa-solid fa-book">‌</i></span>
+							<span class="menu-text" >RENJA</span>
+						</a>
+					</div> 
+					<div class="menu-item">
+						<a href="landing.html" class="menu-link">
+							<span class="menu-icon"><i class="fa-solid fa-grip">‌</i></span>
+							<span class="menu-text" >RENJA PERUBAHAN</span>
+						</a>
+					</div> 
+					<div class="menu-item">
+						<a href="landing.html" class="menu-link">
+							<span class="menu-icon"><i class="fa-solid fa-database">‌</i></span>
+							<span class="menu-text" >CAPAIAN IKI</span>
+						</a>
+					</div> 
+					<div class="menu-item">
+						<a href="landing.html" class="menu-link">
+							<span class="menu-icon"><i class="fa-solid fa-child">‌</i></i></span>
+							<span class="menu-text" >MONITORING CAPAIAN</span>
+						</a>
+					</div> 
+					<div class="menu-item">
+						<a href="index.php" class="menu-link">
+							<span class="menu-icon"><i class="bi bi-power"></i></span>
+							<span class="menu-text" >LOG OUT</span>
+						</a>
+					</div>
+					 
+				</div>
+			</div>
+			<!-- END scrollbar -->
+		<!-- END #sidebar -->
+			<!-- END scrollbar -->
+		</div>
+		<!-- END #sidebar -->
+			
+		<!-- BEGIN mobile-sidebar-backdrop -->
+		<button class="app-sidebar-mobile-backdrop" data-toggle-target=".app" data-toggle-class="app-sidebar-mobile-toggled"></button>
+		<!-- END mobile-sidebar-backdrop -->
+		
+  <style>
+.app-sidebar {
+ background-color: rgb(14, 240, 6); 
+}
+	</style>
+ 
+	
+		<!-- BEGIN #content -->
+		<div id="content" class="app-content"> 
+		 
+       <div class="content">
+        <div class="container-fluid">
+          <div class="card">
+            <div class="card-header card-chart card-header-danger"> 
+			     <div class="content">
+        <div class="container-fluid"> 
+            <body> 
+            
+<h1 style="font-size: 50px; font-family: impact; text-align:right" id="jam"></h1> 
+              <h4 class="card-title"style="font-family: Bernard MT Condensed;font-size:55px; text-align:center; color:black;">Aplikasi e-SAKIP </h4>  
+               <h4 class="card-title"style="font-family: Bernard MT Condensed;font-size:25px; text-align:center; color:black;">Sistem Akuntabilitas Kinerja Instansi Pemerintah </h4>  
+                </div> 
+                 <img src="assets/images/berakhlak11.png" alt="logo bondowoso"; style="max-width: 100%; height: auto;"> </a></li>  
+				<h3  style="font-family: Cambria,Georgia,serif; font-weight: bold; font-size:30px; text-align:center;">HUBUNGAN RPJMD - RENSTRA <br>DINAS SOSIAL, PEMBERDAYAAN PEREMPUAN,PERLINDUNGAN ANAK, DAN KELUARGA BERENCANA KABUPATEN BONDOWOSO</h3>
+		    </div>
+		    <hr width="100%" align="center">
+		    <div class="col-sm-12 wow fadeInLeft" align="center">
+		    	<div class="example-wrap">
+			  <div class="row">
+				<div class="col-lg-5 col-md-5 col-sm-12">
+				  <h4 style="font-family: Cambria,Georgia,serif; font-weight: bold; ">RPJMD</h4>
+				  <div class="card card-inverse bg-primary">
+					<div class="card-block">
+					  <h5 style="font-family: Cambria,Georgia,serif; font-weight: bold; ">VISI</h5>
+					  <p class="card-text">
+					 
+					MEWUJUDKAN BONDOWOSO TANGGUH, UNGGUL, BERDAYA SAING GLOBAL DAN BERBUDAYA DALAM BINGKAI KEIMANAN DAN KETAKWAAN
+					  
+					  </p>
+					</div>
+				  </div> 
+				  <div class="card card-inverse bg-info">
+					<div class="card-block">
+					  <h5 style="font-family: Cambria,Georgia,serif; font-weight: bold; ">TUJUAN RPJMD</h5>
+					  <p class="card-text">
+					  
+						<li>1. MENURUNNYA TINGKAT KEMISKINAN</li>
+						<li>2. MENINGKATNYA KUALITAS SUMBER DAYA MANUSIA</li>
+					  
+					  </p>
+					</div>
+				  </div>
+				  <div class="card card-inverse bg-warning">
+					<div class="card-block">
+					  <h5 style="font-family: Cambria,Georgia,serif; font-weight: bold; ">SASARAN RPJMD</h5>
+					  <p class="card-text">
+					  
+						<li>1. TERKENDALINYAN PERTUMBUHAN PENDUDUK </li>
+					  <li>  2. MENINGKATNYA PEMBERDAYAAN GENDER, PERLINDUNGAN PEREMPUAN DAN ANAK, SERTA PEMBERDAYAAN PEMUDA.</li>
+					  </p>
+					</div>
+				  </div>
+				</div>
+				    <div class="col-lg-7 col-md-7 col-sm-12">
+                  <h4 style="font-family: Cambria,Georgia,serif; font-weight: bold; ">RENSTRA DINSOS P3AKB</h4>
+                  
+                  <div class="card card-inverse bg-info">
+                    <div class="card-block">
+                       <h5 style="font-family: Cambria,Georgia,serif; font-weight: bold; ">TUJUAN RENSTRA </h5>
+                        
+                      <p><h5 class="text-white-50"></h5></p>
+                        <h5>1. MENINGKATNYA TARAF KESEJAHTERAAN SOSIAL PENDUDUK MISKIN DAN RENTAN</h5> 
+                      </p>
+                          <div class="card card-inverse bg-warning">
+                    <div class="card-block">
+                      <h5 style="font-family: Cambria,Georgia,serif; font-weight: bold; "> SASARAN RENSTRA :</h5>
+                        <p>1. Meningkatnya Pelayanan Administrasi Perkantoran </p>
+                        <p>2. Meningkatnya kualitas pelayanan perangkat daerah meningkatnya kualitas pelayanan perangkat daerah </p>
+                        <p>3. Meningkatnya kemandirian sosial ekonomi penduduk miskin dan rentan </p> 
+                     
+          <div class="card card-inverse bg-success">
+                    <div class="card-block">
+                      <h5 style="font-family: Cambria,Georgia,serif; font-weight: bold; "> Indikator Tujuan / Sasaran: <h5>
+<p>1. % ASN yang puas terhadap pelayanan administrasi </p>
+<p>2. Indeks Kepuasan Masyarakat </p>
+<p>3. % Dokumen Perencanaan dan Evaluasi OPD yang disusun tepat waktu  </p>
+<p>4. Nilai SAKIP </p>
+ 
+
+  <div class="card card-inverse bg-info">
+                    <div class="card-block">
+                       <h5 style="font-family: Cambria,Georgia,serif; font-weight: bold; ">TUJUAN RENSTRA </h5> 
+                      <p><h5 class="text-white-50"></h5></p>
+                        <h5>2. MENINGKATNYA KESETARAAN DAN KEADILAN GENDER</h5> 
+                      </p>
+                    <div class="card card-inverse bg-warning">
+                    <div class="card-block">
+                      <h5 style="font-family: Cambria,Georgia,serif; font-weight: bold; "> SASARAN RENSTRA :</h5>
+                        <p>1. Meningkatnya PUG dan Pemenuhan Hak Anak </p> 
+                    
+ <div class="card card-inverse bg-success">
+                    <div class="card-block">
+                      <h5 style="font-family: Cambria,Georgia,serif; font-weight: bold; "> Indikator Tujuan / Sasaran: <h5>
+<p>1. Indek Pembangunan Gender (IPG)</p>
+<p>2. Status Kabupaten Layak Anak </p>
+<p>3. Indeks Pemberdayaan Gender (IDG) </p>
+
+
+  <div class="card card-inverse bg-info">
+                    <div class="card-block">
+                       <h5 style="font-family: Cambria,Georgia,serif; font-weight: bold; ">TUJUAN RENSTRA </h5> 
+                      <p><h5 class="text-white-50"></h5></p> 
+                        <h5>3. MENINGKATNYA KELUARGA BERKUALITAS DAN PERTUMBUHAN PENDUDUK YANG SEIMBANG</h5> 
+                      </p>
+                     <div class="card card-inverse bg-warning">
+                    <div class="card-block">
+                      <h5 style="font-family: Cambria,Georgia,serif; font-weight: bold; "> SASARAN RENSTRA :</h5>
+                        <p>1. Meningkatnya pendewasaan usia perkawinan dan kualitas pelayanan KB  </p> 
+                   
+          <div class="card card-inverse bg-success">
+                    <div class="card-block">
+                      <h5 style="font-family: Cambria,Georgia,serif; font-weight: bold; "> Indikator Tujuan / Sasaran: <h5>
+<p>1. Bangga (Indeks Pembangunan Keluarga) </p>
+<p>2. LPP (Laju Pertumbuhan Penduduk) </p>
+<p>3. Median Usia Kawin Pertama Perempuan (MUKP)</p> 
+
+					</div>
+				  </div>
+				  <div class="card card-inverse bg-primary">
+					<div class="card-block">
+					  <h5 style="font-family: Cambria,Georgia,serif; font-weight: bold; ">PROGRAM DINSOS P3AKB</h5>
+					  <p class="card-text">
+					  
+						<p>ADA 14 PROGRAM</p>
+					  
+						<p>1. Program Penunjang Urusan Pemerintahan Daerah Kabupaten/Kota </p>
+					  
+						<p>2. Program Pemberdayaan Sosial </p>
+					  
+						<p>3. Program Penanganan Warga Negara Migran Korban Tindak Kekerasan</p>
+					  
+						<p>4. Program Rehabilitasi Sosial </p>
+					  
+						<p>5. Progam Perlindungan dan Jaminan Sosial </p>
+                        
+                        <p>6. Program Penanganan Bencana </p>
+
+					   <p>7. Pengelolaan Taman Makam Pahlawan </p>
+
+                        <p>8. Program Pengarus Utamaan Gender Dan Pemberdayaan Perempuan </p>
+
+                         <p>9. Program Perlindungan Perempuan </p>
+
+                          <p>10. Program Pemenuhan Hak Anak (PHA)  </p>
+
+                           <p>11. Program Perlindungan Khusus Anak  </p>
+
+                            <p>12. Program Pengendalian Penduduk </p>
+
+                             <p>13. Program Pembinaan Keluarga Berencana (KB)  </p>
+
+                              <p>14. Program Pemberdayaan Dan Peningkatan Keluarga Sejahtera (KS)  </p> 
+					</div>
+				  </div>
+				</div>
+
+			  </div>
+			</div>
+    
+             <script type="text/javascript">
+ window.onload = function() { jam(); }
+
+ function jam() {
+  var e = document.getElementById('jam'),
+  d = new Date(), h, m, s;
+  h = d.getHours();
+  m = set(d.getMinutes());
+  s = set(d.getSeconds());
+
+  e.innerHTML = h +':'+ m +':'+ s;
+
+  setTimeout('jam()', 1000);
+ }
+
+ function set(e) {
+  e = e < 10 ? '0'+ e : e;
+  return e;
+ }
+</script>         
+
+
+ <!-- END theme-panel -->
+		<!-- BEGIN btn-scroll-top -->
+		<a href="#" data-toggle="scroll-to-top" class="btn-scroll-top fade"><i class="fa fa-arrow-up"></i></a>
+		<!-- END btn-scroll-top -->
+	</div>
+	<!-- END #app -->
+	
+<footer class="footer pt-12">
+        <div class="row align-items-center justify-content-lg-between">
+          <div class="col-lg-12">
+            <div class="copyright text-center text-lg-left text-muted">
+            <center style="text-align:center; font-size:15px; color:rgb(243, 243, 248);">  &copy; <script>document.write(new Date().getFullYear())</script> 
+          <a >DINAS SOSIAL P3AKB | KABUPATEN BONDOWOSO | Dwi Agus Purwanto S.Sos</a></center>
+            
+           
+   <script type = "text/javascript" >
+	function preventBack(){window.history.forward();}
+	setTimeout("preventBack()", 0);
+	window.onunload=function(){null};
+  </script>  
+
+	<!-- ================== BEGIN core-js ================== -->
+	<script data-cfasync="false" src="assets/js/email-decode.min.js"></script><script src="assets/js/vendor.min.js" type="cb357620f1a35437e6a0bf99-text/javascript"></script>
+	<script src="assets/js/app.min.js" type="cb357620f1a35437e6a0bf99-text/javascript"></script> 
+	<script src="assets/js/jquery-jvectormap.min.js" type="cb357620f1a35437e6a0bf99-text/javascript"></script>
+	<script src="assets/js/world-mill.js" type="cb357620f1a35437e6a0bf99-text/javascript"></script>
+	<script src="assets/js/apexcharts.min.js" type="cb357620f1a35437e6a0bf99-text/javascript"></script>
+	<script src="assets/js/moment.min.js" type="cb357620f1a35437e6a0bf99-text/javascript"></script>
+	<script src="assets/js/daterangepicker.js" type="cb357620f1a35437e6a0bf99-text/javascript"></script>
+	<script src="assets/js/dashboard.demo.js" type="cb357620f1a35437e6a0bf99-text/javascript"></script>
+	<!-- ================== END page-js ================== -->
+	
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-Y3Q0VGQKY3" type="cb357620f1a35437e6a0bf99-text/javascript"></script>
+	 
+<script src="assets/js/rocket-loader.min.js" data-cf-settings="cb357620f1a35437e6a0bf99-|49" defer></script><script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"rayId":"9208ce198ca1ce43","version":"2025.1.0","r":1,"token":"4db8c6ef997743fda032d4f73cfeff63","serverTiming":{"name":{"cfExtPri":true,"cfL4":true,"cfSpeedBrain":true,"cfCacheStatus":true}}}' crossorigin="anonymous"></script>
+</body>
+
+</html>
+
