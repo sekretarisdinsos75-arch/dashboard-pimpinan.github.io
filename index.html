@@ -100,29 +100,7 @@
                                     </div>
                                     </div>
                                     </div>
-
- <script type="text/javascript">
- window.onload = function() { jam(); }
-
- function jam() {
-  var e = document.getElementById('jam'),
-  d = new Date(), h, m, s;
-  h = d.getHours();
-  m = set(d.getMinutes());
-  s = set(d.getSeconds());
-
-  e.innerHTML = h +':'+ m +':'+ s;
-
-  setTimeout('jam()', 1000);
- }
-
- function set(e) {
-  e = e < 10 ? '0'+ e : e;
-  return e;
- }
-</script>   
-
-						  
+				  
      <h9 style="font-family: Cambria,Georgia,serif; font-size:20px; text-align:center; color:#008080;""><span id="tanggalwaktu"></span></h9>
 <script>
 var tw = new Date();
@@ -422,6 +400,28 @@ document.getElementById("tanggalwaktu").innerHTML = hariarray[hari]+" "+tanggal+
           <div class="card">
             <div class="card-header card-chart card-header-danger">  
          <div class="card">   
+			 
+ <script type="text/javascript">
+ window.onload = function() { jam(); }
+
+ function jam() {
+  var e = document.getElementById('jam'),
+  d = new Date(), h, m, s;
+  h = d.getHours();
+  m = set(d.getMinutes());
+  s = set(d.getSeconds());
+
+  e.innerHTML = h +':'+ m +':'+ s;
+
+  setTimeout('jam()', 1000);
+ }
+
+ function set(e) {
+  e = e < 10 ? '0'+ e : e;
+  return e;
+ }
+</script>   
+
            <img src="assets/images/berakhlak11.png" alt="" >  
       <center> <a class="title" style="font-size:30px; color:DarkGreen">SISTEM INFORMASI DATA TERPADU LAYANAN PIMPINAN</a></center> 
        <center>  <h5 style="font-size:30px; color:DarkGreen">(SINDALAP)</h5></center> 
@@ -485,6 +485,7 @@ document.getElementById("tanggalwaktu").innerHTML = hariarray[hari]+" "+tanggal+
 </body>
 
 </html>
+
 
 
 
